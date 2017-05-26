@@ -1,2 +1,2 @@
 #!/bin/sh
-cat - >> /data/$(uuidgen).avro
+cat - | pv --rate-limit 10m >> /data/$(uuidgen).avro
